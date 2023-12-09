@@ -5,6 +5,8 @@ body {
   background-color: #f0f0f0;
 }
 
+/* Navbar */
+
 nav {
   background-color: #333;
   color: #fff;
@@ -19,6 +21,8 @@ nav a {
   text-decoration: none;
   margin-right: 15px;
 }
+
+/* Hero */
 
 .hero {
   position: relative;
@@ -42,6 +46,8 @@ nav a {
   margin: 0;
 }
 
+/* Card */
+
 .card-title {
   text-align: center;
   margin: 20px auto;
@@ -61,13 +67,15 @@ nav a {
   text-align: left;
 }
 
+/* Work grid */
+
 .work {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-    "project1 project1"
-    "project2 project3"
-    "project4 project5";
+    "seo seo"
+    "prework crosspay"
+    "polygon portfolio";
   grid-gap: 20px;
   margin: auto auto;
 }
@@ -92,26 +100,27 @@ nav a {
   line-height: 1.5;
 }
 
-/* Assign grid area names */
 .work-item:nth-child(1) {
-  grid-area: project1;
+  grid-area: seo;
 }
 
 .work-item:nth-child(2) {
-  grid-area: project2;
+  grid-area: prework;
 }
 
 .work-item:nth-child(3) {
-  grid-area: project3;
+  grid-area: crosspay;
 }
 
 .work-item:nth-child(4) {
-  grid-area: project4;
+  grid-area: polygon;
 }
 
 .work-item:nth-child(5) {
-  grid-area: project5;
+  grid-area: portfolio;
 }
+
+/* Footer */
 
 .footer {
   display: flex;
@@ -135,4 +144,16 @@ nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .work {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "seo"
+      "prework" "crosspay"
+      "polygon" "portfolio";
+  }
 }
